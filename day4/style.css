@@ -1,0 +1,48 @@
+div {
+  background-color: black;
+  height: 100px;
+  width: 100px;
+  color: white;
+  font-size: 64px;
+
+  padding-left: 20px;
+  padding-right: 30px;
+  padding-top: 40px;
+  padding-bottom: 50px;
+
+  padding: 20px 40px 60px 80px;
+
+  padding: 20px 40px 60px;
+
+  padding: 50px 100px;
+
+  padding: 100px;
+}
+
+.div1 {
+  margin-bottom: 60px;
+}
+
+.div2 {
+  background-color: orange;
+  margin-top: 40px;
+  margin-left: 20px;
+  margin: 80px 30px 10px 20px;
+  margin: 100px auto;
+
+  border-width: 30px;
+  border-style: solid;
+  border-color: red;
+
+  border-top-style: groove;
+  border-top-color: green;
+  border-top-width: 60px;
+
+  border: 20px solid red;
+
+  border-radius: 20px 30px 40px 50px;
+  border-radius: 20px 50px 30px;
+  border-radius: 20px 60px;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
