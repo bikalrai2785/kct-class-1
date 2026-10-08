@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String & Conditional statements</title>
+  </head>
+  <body>
+    <script>
+      // string methods
+      const string1 = "Hello World";
+      console.log(string1.length);
+
+      console.log(string1[5]);
+      console.log(string1[3]);
+      console.log(string1.charAt(7));
+      console.log(string1.indexOf("d"));
+      console.log(string1.includes("p"));
+      console.log(string1.toLowerCase());
+      console.log(string1.toUpperCase());
+      console.log(string1.substring(5));
+      console.log(string1.substring(3, string1.length - 3));
+      console.log(string1.slice(0));
+      console.log(string1.slice(6));
+      console.log(string1.slice(6, string1.length));
+      console.log(string1.split(" "));
+      console.log(string1.split(""));
+
+      const string2 = "       Welcome      ";
+      console.log("String2:", string2);
+      console.log(string2.trimStart());
+      console.log(string2.trimEnd());
+      console.log(string2.trim());
+
+      const firstName = "bIkAL";
+      const lastName = "rai";
+
+      const firstLetterOfFirstName = firstName[0].toUpperCase();
+      const firstNameRestOfTheLetters = firstName.slice(1).toLowerCase();
+      const capitalizedFirstName =
+        firstLetterOfFirstName + firstNameRestOfTheLetters;
+
+      console.log(capitalizedFirstName);
+
+      const firstLetterOfLastName = lastName[0].toUpperCase();
+      const lastNameRestOfTheLetters = lastName.slice(1).toLowerCase();
+      const capitalizedLastName =
+        firstLetterOfLastName + lastNameRestOfTheLetters;
+
+      console.log(capitalizedLastName);
+
+      const fullName = capitalizedFirstName + " " + capitalizedLastName;
+
+      console.log(fullName);
+
+      console.log("==========================================");
+
+      // if else statement, switch case, ternary operator
+
+      //   if(condition) {
+      //     do something
+      //   }
+
+      // if(condition) {
+      //      do something
+      // } else {
+      //     do something
+      // }
+
+      //   if (condition) {
+      //     do something
+      //   } else if (condition) {
+      //     do something
+      //   } else {
+      //     do something
+      //   }
+
+      if (true) {
+        console.log("This is true");
+      }
+
+      const lightColor = "green";
+
+      if (lightColor === "green") {
+        console.log("Go");
+      }
+
+      console.log("After if statement");
+      console.log("==== if else statement ====");
+
+      if (lightColor === "green") {
+        console.log("Go");
+      } else {
+        console.log("Stop");
+      }
+
+      console.log("=== if else if else statement ===");
+      if (lightColor.toLowerCase() === "Green".toLowerCase()) {
+        console.log("Go");
+      } else if (lightColor === "red") {
+        console.log("Stop");
+      } else if (lightColor === "yellow") {
+        console.log("Slow down");
+      } else {
+        console.log("Invalid color");
+      }
+
+      if (lightColor.toLowerCase() === "Green".toLowerCase()) {
+        console.log("Go");
+      }
+      if (lightColor === "red") {
+        console.log("Stop");
+      }
+
+      if (lightColor === "yellow") {
+        console.log("Slow down");
+      }
+
+      if (lightColor.toLowerCase() === "Green".toLowerCase()) {
+        console.log("Go");
+      } else if (lightColor === "red") {
+        console.log("Stop");
+      } else if (lightColor === "yellow") {
+        console.log("Slow down");
+      }
+
+      console.log("==== switch statement ====");
+      // switch statement
+      //   switch(value) {
+      //     case 1:
+      //         code execution
+      //         break;
+      //     case 2:
+      //         code execution
+      //         break;
+      //     ...
+      //     case N:
+      //         code execution
+      //         break;
+      //     default:
+      //         code execution
+      //   }
+
+      const day = 7;
+
+      switch (day) {
+        case 1:
+          console.log("sunday");
+          break;
+        case 2:
+          console.log("monday");
+          break;
+        case 3:
+          console.log("tuesday");
+          break;
+        case 4:
+          console.log("wednesday");
+          break;
+        case 5:
+          console.log("thursday");
+          break;
+        case 6:
+          console.log("friday");
+          break;
+        case 7:
+          console.log("saturday");
+          break;
+        default:
+          console.log("invalid day");
+      }
+
+      console.log("=== ternary ===");
+      //   condition ? execute if true : execute if false
+      const age = 17;
+
+      age >= 18
+        ? console.log("Eligible to vote")
+        : console.log("Ineligible to vote");
+
+      // functions
+      console.log("==== functions ====");
+      // we can declare functions in three ways:
+      // 1) function functionName() {
+      //   }
+
+      function sewaro() {
+        console.log("Hello");
+      }
+
+      sewaro();
+
+      // function with parameters
+      // if we assign parameters with values, it is their default value
+      function addition(num1, num2 = 7) {
+        console.log(num1 + num2);
+      }
+
+      addition(10, 3);
+      addition(9);
+
+      function subtraction(num1, num2, num3) {
+        console.log(num1 - num2 - num3);
+      }
+
+      // function with return statement and no parameters
+      function multiply() {
+        const result = 5 * 5;
+
+        return result;
+        console.log("After return statement");
+      }
+
+      multiply();
+
+      const result = multiply();
+      console.log(result);
+
+      //   function with return statement and paramenters
+      function greet(name, address) {
+        return `Hello my name is ${name}, and i live in ${address}`;
+      }
+
+      const greeting = greet("Bikal Rai", "Bhainsepati");
+      console.log(greeting);
+
+      //2) function declaration
+      //   const functionName = function () {
+
+      //   }
+
+      const func1 = function () {
+        console.log("Func 1");
+      };
+      func1();
+
+      // 3) arrow function
+      //   const functionName = () => {
+
+      //   }
+
+      const func2 = () => {
+        console.log("func 2");
+      };
+
+      const func3 = () => 3;
+      console.log(func3());
+
+      // anonymous function
+      (() => {
+        console.log("Anonymous function");
+      })();
+
+      console.log("==========================================");
+      console.log("==== MORE EXAMPLES: COMPLEX LOGIC ====");
+
+      // 1. if/else with Multiple Conditions (Logical && and ||)
+      const isLoggedIn = true;
+      const userRole = "admin";
+
+      // && means BOTH must be true. || means AT LEAST ONE must be true.
+      if (isLoggedIn && userRole === "admin") {
+        console.log("Access granted to Admin Dashboard");
+      } else if (isLoggedIn && userRole === "guest") {
+        console.log("Access granted to Guest View");
+      } else if (!isLoggedIn || userRole === "banned") {
+        console.log("Access Denied. Please log in or contact support.");
+      }
+
+      // 2. Switch Statement with Grouped Cases
+      // Notice how we stack cases to execute the same code for multiple values
+      const currentMonth = "February";
+
+      switch (currentMonth) {
+        case "December":
+        case "January":
+        case "February":
+          console.log("It's Winter! Bundle up.");
+          break;
+        case "March":
+        case "April":
+        case "May":
+          console.log("It's Spring! Blooming time.");
+          break;
+        default:
+          console.log("It's either Summer or Fall.");
+      }
+
+      // 3. Ternary Operator used for Variable Assignment
+      // This is the most common industry use of ternaries!
+      const cartTotal = 150;
+      const shippingCost = cartTotal >= 100 ? 0 : 10;
+      console.log(
+        `Your total is ${cartTotal}. Shipping cost is: $${shippingCost}`,
+      );
+
+      // 4. Practical Functions combining Conditionals
+      function checkWeather(temp, isRaining) {
+        if (isRaining && temp < 15) {
+          return "Wear a heavy raincoat and boots.";
+        } else if (isRaining && temp >= 15) {
+          return "Grab an umbrella, it's warm but wet.";
+        } else if (!isRaining && temp > 25) {
+          return "T-shirt and sunglasses weather!";
+        } else {
+          return "A light jacket should be fine.";
+        }
+      }
+
+      console.log("Weather for 12C and raining:", checkWeather(12, true));
+      console.log("Weather for 28C and sunny:", checkWeather(28, false));
+
+      // 5. Arrow Function returning a Ternary directly (Short & Clean)
+      const checkEvenOrOdd = (num) => (num % 2 === 0 ? "Even" : "Odd");
+
+      console.log("Is 4 even or odd?:", checkEvenOrOdd(4));
+      console.log("Is 7 even or odd?:", checkEvenOrOdd(7));
+    </script>
+  </body>
+</html>
