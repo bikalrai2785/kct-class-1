@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE DOM</title>
+    <style>
+      #header1 {
+        background-color: black;
+        color: white;
+      }
+
+      .my-class {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        text-transform: uppercase;
+        color: white;
+        transition: 1s linear;
+      }
+    </style>
+
+    <!-- <script defer src="./assets/js/script.js"></script> -->
+  </head>
+  <body>
+    <h1 id="header1">My header</h1>
+    <a href="">My link</a>
+    <ul class="my-list">
+      <li class="list-item">list item 1</li>
+      <li class="list-item">list item 2</li>
+    </ul>
+
+    <ol id="list-two">
+      <li>one</li>
+      <li>two</li>
+      <li>
+        <ul>
+          <li class="list-item-three">three</li>
+        </ul>
+      </li>
+    </ol>
+
+    <input type="text" name="input-name" required />
+
+    <button id="btn">click to toggle class</button>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
